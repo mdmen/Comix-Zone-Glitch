@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "gulp dev -f gulp/gulpfile.babel.js",
+    "build": "gulp build --production -f gulp/gulpfile.babel.js",
+    "lint": "tsc --noEmit && eslint . --ext .ts && prettier --check src",
+    "prettier": "prettier --write src"
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.x",
+    "npm": ">=6.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/register": "^7.14.5",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "autoprefixer": "^10.3.1",
+    "browserify": "^17.0.0",
+    "cssnano": "^5.0.7",
+    "del": "^6.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-mode": "^1.1.0",
+    "gulp-postcss": "^9.0.0",
+    "postcss": "^8.3.6",
+    "postcss-import": "^14.0.2",
+    "prettier": "^2.3.2",
+    "tsify": "^5.0.4",
+    "typescript": "^4.3.5",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^4.0.0"
+  }
+}
