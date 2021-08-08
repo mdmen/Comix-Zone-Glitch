@@ -3,8 +3,10 @@
   "scripts": {
     "start": "gulp dev -f gulp/gulpfile.babel.js",
     "build": "gulp build --production -f gulp/gulpfile.babel.js",
-    "lint": "tsc --noEmit && eslint . --ext .ts && prettier --check src",
-    "prettier": "prettier --write src"
+    "lint": "npm run checkTs && npm run eslint",
+    "eslint": "eslint . --ext .ts",
+    "tslint": "tsc --noEmit",
+    "prettier": "prettier -write src"
   },
   "browserslist": [
     "last 2 version",
