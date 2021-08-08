@@ -3,7 +3,7 @@
   "scripts": {
     "start": "gulp dev -f gulp/gulpfile.babel.js",
     "build": "gulp build --production -f gulp/gulpfile.babel.js",
-    "lint": "npm run checkTs && npm run eslint",
+    "lint": "yarn run tslint && yarn run eslint",
     "eslint": "eslint . --ext .ts",
     "tslint": "tsc --noEmit",
     "prettier": "prettier -write src"
