@@ -4,6 +4,9 @@ import tsify from 'tsify';
 import source from 'vinyl-source-stream';
 import watchify from 'watchify';
 import fancyLog from 'fancy-log';
+import uglify from 'gulp-uglify';
+import sourcemaps from 'gulp-sourcemaps';
+import buffer from 'vinyl-buffer';
 
 const bundleFileName = 'bundle.js';
 const getConfig = ({ sourceFolder }) => ({
@@ -19,6 +22,10 @@ export const getScriptsTask = ({ sourceFolder, distFolder }) => {
       .plugin(tsify)
       .bundle()
       .pipe(source(bundleFileName))
+      .pipe(buffer())
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(uglify())
+      .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest(distFolder));
   };
 };
