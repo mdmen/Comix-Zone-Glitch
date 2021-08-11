@@ -1,4 +1,4 @@
-name: eslint
+name: Lint
 
 on:
   pull_request:
@@ -14,5 +14,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: yarn install --frozen-lockfile
-      - run: yarn run eslint
+
+      - name: Install
+        yarn --frozen-lockfile
+
+      - name: Lint files
+        yarn run eslint
+
+      - name: Check typescript
+        yarn run tslint
