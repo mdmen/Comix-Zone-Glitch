@@ -1,5 +1,7 @@
 ## Games clash
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/31425d2a8c82c3caf23d/maintainability)](https://codeclimate.com/github/mdmen/games-clash/maintainability)
+
 2D html5 fighting game
 
 screenshot
