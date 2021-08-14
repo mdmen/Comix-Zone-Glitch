@@ -1,12 +1,5 @@
 {
   "private": true,
-  "scripts": {
-    "start": "gulp dev -f gulp/gulpfile.babel.js",
-    "build": "gulp build --production -f gulp/gulpfile.babel.js",
-    "lint": "yarn run tslint && yarn run eslint",
-    "eslint": "eslint . --ext .ts",
-    "tslint": "tsc --noEmit"
-  },
   "browserslist": [
     "last 2 version",
     "not dead",
@@ -18,12 +11,12 @@
   },
   "lint-staged": {
     "*.{ts,css,html}": [
-      "prettier --write src"
+      "prettier --write"
     ]
   },
   "simple-git-hooks": {
     "pre-commit": "yarn run lint-staged",
-    "pre-push": "yarn run lint"
+    "pre-push": "make lint"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

@@ -19,7 +19,7 @@ jobs:
         yarn --frozen-lockfile
 
       - name: Lint files
-        yarn run eslint
+        make eslint
 
       - name: Check typescript
-        yarn run tslint
+        make tslint

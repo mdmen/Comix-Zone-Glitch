@@ -19,7 +19,7 @@ screenshot
    ```
 3. Install NPM packages and build
    ```sh
-   yarn && yarn run build
+   yarn && make build
    ```
 4. Open dist/index.html
 
@@ -31,5 +31,5 @@ screenshot
    ```
 2. Run dev server
    ```sh
-   yarn run start
+   make start
    ```
