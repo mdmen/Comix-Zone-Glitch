@@ -2,10 +2,10 @@
 .DEFAULT_GOAL := help
 
 start: ## Start dev server
-	@gulp dev -f gulp/gulpfile.babel.js
+	@webpack serve --config webpack/webpack.dev.js
 
 build: ## Create production build
-	@gulp build --production -f gulp/gulpfile.babel.js
+	@webpack --config webpack/webpack.prod.js
 
 eslint: ## Lint *.ts files by eslint
 	@eslint . --ext .ts
